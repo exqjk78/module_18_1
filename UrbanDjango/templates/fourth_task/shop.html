@@ -1,0 +1,15 @@
+{% extends "menu.html" %}
+
+<title>{{ shop }}</title>
+
+{% block header %}
+     <h1>{{ shop }}</h1>
+{% endblock %}
+
+{% block nav %}
+    {{ block.super }}
+{% endblock %}
+
+{% block main %}
+    {{ block.super }}
+{% endblock %}
