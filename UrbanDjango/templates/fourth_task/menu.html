@@ -5,29 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-    <header>
-        {% block header %}
-            <h1>{{ main_page }}</h1>
-        {% endblock %}
-    </header>
-
-    <nav>
-        {% block nav %}
-            <p><a href="platform">{{ main_page }}</a></p>
-            <p><a href="platform/shop">{{ shop }}</a></p>
-            <p><a href="platform/cart">{{ cart }}</a></p>
-        {% endblock %}
-    </nav>
-
-    <main>
-        {% block main %}
-            <h2>{{ types }}</h2>
-            <ul>
-                {% for i in pelmeni %}
-                    <li>{{ i }} <button>{{ buy }}</button></li>
-                {% endfor %}
-            </ul>
-        {% endblock %}
-    </main>
+    {% block pagename %}{% endblock %}
+    {% block menu %}
+        <p><a href="/platform">Главная</a></p>
+        <p><a href="/platform/shop">Магазин</a></p>
+        <p><a href="/platform/cart">Корзина</a></p>
+    {% endblock %}
+    {% block content %}{% endblock %}
 </body>
 </html>

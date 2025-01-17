@@ -1,14 +1,4 @@
-{% extends "fourth_task/menu.html" %}
-
-<title>{{ title }}</title>
-
-{% block header %}
-     <h1>{{ block.super }}</h1>
-{% endblock %}
-
-{% block nav %}
-    {{ block.super }}
-{% endblock %}
-
-{% block main %}
-{% endblock %}
+{% extends 'fourth_task/menu.html' %}
+{% block pagename%}<h1>Главная страница</h1>{% endblock %}
+{% block menu %}{{ block.super }}{% endblock %}
+{% block content %}{% endblock %}

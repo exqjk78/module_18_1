@@ -1,15 +1,10 @@
-{% extends "fourth_task/menu.html" %}
-
-<title>{{ shop }}</title>
-
-{% block header %}
-     <h1>{{ shop }}</h1>
-{% endblock %}
-
-{% block nav %}
-    {{ block.super }}
-{% endblock %}
-
-{% block main %}
-    {{ block.super }}
+{% extends 'fourth_task/menu.html' %}
+{% block pagename %}<h1>Пельмени</h1>{% endblock %}
+{% block menu %}{{ block.super }}{% endblock %}
+{% block content %}
+    <ul>
+        {% for i in pelmeni %}
+            <li>{{ i }} <button>Купить</button></li>
+        {% endfor %}
+    </ul>
 {% endblock %}

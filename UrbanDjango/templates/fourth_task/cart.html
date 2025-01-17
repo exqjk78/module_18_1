@@ -1,15 +1,6 @@
-{% extends "fourth_task/menu.html" %}
-
-<title>{{ cart }}</title>
-
-{% block header %}
-     <h1>{{ cart }}</h1>
-{% endblock %}
-
-{% block nav %}
-    {{ block.super }}
-{% endblock %}
-
-{% block main %}
-    <h1>{{ message }}</h1>
+{% extends 'fourth_task/menu.html' %}
+{% block pagename %}<h1>Корзина</h1>{% endblock %}
+{% block menu %}{{ block.super }}{% endblock %}
+{% block content %}
+    <h2>Извините, ваша корзина пуста</h2>
 {% endblock %}
